@@ -1,0 +1,114 @@
+@media (max-width: 1080px) {
+    .navbar-header-styled {
+        padding: 0px 40px;
+    }
+}
+
+.navbar-header-styled {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+
+.navbar-styled {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: var(--lightest-slate);
+    font-family: var(--font-mono);
+    counter-reset: item 0;
+    z-index: 12;
+}
+
+.navbar-styled .navbar-homepage-logo {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.navbar-links ol {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.navbar-links ol li {
+    margin: 0px 5px;
+    position: relative;
+    counter-increment: item 1;
+    font-size: var(--fz-sm);
+}
+
+.navbar-links ol li a {
+    padding: 10px;
+}
+
+.navbar-links ol li a:hover {
+    color: var(--green);
+}
+
+.navbar-links ol li a:focus {
+    color: var(--green);
+}
+
+li a::before {
+    content: "0" counter(item) ".";
+    margin-right: 5px;
+    color: var(--green);
+    font-size: var(--fz-xs);
+    text-align: right;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: var(--transition);
+}
+
+.navbar-links .resume-button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 15px;
+    font-size: var(--fz-sm);
+
+}
+
+.navbar-links .resume-button:hover,
+.navbar-links .resume-button:focus {
+    background-color: var(--green-tint);
+}
