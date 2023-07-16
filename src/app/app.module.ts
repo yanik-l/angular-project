@@ -8,6 +8,7 @@ import { SocialLinksComponent } from './social-links/social-links.component';
 import { EmailLinkComponent } from './email-link/email-link.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { JobsComponent } from './jobs/jobs.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     SocialLinksComponent,
     EmailLinkComponent,
     IntroductionComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    JobsComponent
   ],
   imports: [
     BrowserModule,
