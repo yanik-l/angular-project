@@ -9,6 +9,7 @@ import { EmailLinkComponent } from './email-link/email-link.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { JobsComponent } from './jobs/jobs.component';
     EmailLinkComponent,
     IntroductionComponent,
     AboutMeComponent,
-    JobsComponent
+    JobsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

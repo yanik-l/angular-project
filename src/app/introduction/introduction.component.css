@@ -64,22 +64,6 @@ p:last-of-type {
     max-width: 540px;
 }
 
-a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-}
-
-p>a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    color: var(--green);
-}
-
 p>a::after {
     content: "";
     display: block;

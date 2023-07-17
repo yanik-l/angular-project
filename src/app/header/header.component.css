@@ -83,15 +83,6 @@ li a::before {
     text-align: right;
 }
 
-a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    position: relative;
-    transition: var(--transition);
-}
-
 .navbar-links .resume-button {
     color: var(--green);
     background-color: transparent;
