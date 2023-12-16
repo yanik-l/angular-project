@@ -36,7 +36,6 @@
 .email-wrapper-styled a:hover,
 .email-wrapper-styled a:focus {
     transform: translateY(-3px);
-    color: var(--green);
 }
 
 .email-wrapper-styled::after {

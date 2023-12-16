@@ -100,6 +100,8 @@ li a::before {
 }
 
 .navbar-links .resume-button:hover,
-.navbar-links .resume-button:focus {
-    background-color: var(--green-tint);
+.navbar-links .resume-button:focus-visible {
+    outline: none;
+    box-shadow: 3px 3px 0 0 var(--green);
+    transform: translate(-4px, -4px);
 }

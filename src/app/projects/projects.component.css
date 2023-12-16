@@ -1,0 +1,215 @@
+.projects-wrapper {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.project {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+}
+
+.project:not(:last-of-type) {
+    margin-bottom: 100px;
+}
+
+.project .project-contents {
+    position: relative;
+    grid-area: 1 / 1 / -1 / 7;
+}
+
+.project:nth-of-type(2n+1) .project-contents {
+    grid-column: 7 / -1;
+    text-align: right;
+}
+
+.project .project-overline {
+    margin: 10px 0px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    font-weight: 400;
+}
+
+.project .project-title {
+    color: var(--lightest-slate);
+    font-size: clamp(24px, 5vw, 28px);
+}
+
+@media (min-width: 768px) {
+    .project .project-title {
+        margin: 0px 22px 20px;
+    }
+}
+
+.projects-wrapper a {
+    position: relative;
+    z-index: 1;
+}
+
+.project .project-description {
+    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    background-color: var(--light-navy);
+    color: var(--light-slate);
+    font-size: var(--fz-lg);
+}
+
+p:last-child,
+p:last-of-type {
+    margin: 0px;
+}
+
+.project .project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin: 25px 0px 10px;
+    padding: 0px;
+    list-style: none;
+}
+
+.project:nth-of-type(2n+1) .project-tech-list {
+    justify-content: flex-end;
+}
+
+.project .project-tech-list li {
+    margin: 0px 20px 5px 0px;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+    white-space: nowrap;
+}
+
+.project:nth-of-type(2n+1) .project-tech-list li {
+    margin: 0px 0px 5px 20px;
+}
+
+.project .project-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    margin-left: -10px;
+    color: var(--lightest-slate);
+}
+
+.project:nth-of-type(2n+1) .project-links {
+    justify-content: flex-end;
+    margin-left: 0px;
+    margin-right: -10px;
+}
+
+.project .project-links a {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.project .project-links a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.project .project-links a.external svg {
+    width: 22px;
+    height: 22px;
+    margin-top: -4px;
+}
+
+.project .project-image {
+    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    transition: var(--transition);
+    grid-area: 1 / 6 / -1 / -1;
+    position: relative;
+    z-index: 1;
+}
+
+.project:nth-of-type(2n+1) .project-image {
+    grid-column: 1 / 8;
+}
+
+.project .project-image a {
+    width: 100%;
+    height: 100%;
+    background-color: var(--green);
+    border-radius: var(--border-radius);
+    vertical-align: middle;
+}
+
+.project .project-image a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0px;
+    z-index: 3;
+    transition: var(--transition);
+    background-color: var(--navy);
+    mix-blend-mode: screen;
+}
+
+.project .project-image a:hover,
+.project .project-image a:focus {
+    background: transparent;
+    outline: 0px;
+}
+
+.project .project-image .img {
+    border-radius: var(--border-radius);
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1) brightness(80%);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.project .project-image a:hover .img {
+    filter: grayscale(0%) contrast(0.9) brightness(90%);
+}
+
+.gatsby-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.gatsby-image-wrapper [data-main-image] {
+    transform: translateZ(0);
+    transition: opacity .25s linear;
+    will-change: opacity;
+}
+
+.gatsby-image-wrapper-constrained {
+    display: inline-block;
+}
+
+img,
+svg,
+.gatsby-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.gatsby-image-wrapper img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+}

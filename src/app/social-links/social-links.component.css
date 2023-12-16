@@ -31,23 +31,11 @@
 a:hover,
 a:focus {
     transform: translateY(-3px);
-    color: var(--green);
 }
 
 .social-element-styled li a svg {
     width: 20px;
     height: 20px;
-}
-
-svg.feather {
-    fill: none;
-}
-
-svg {
-    width: 100%;
-    height: 100%;
-    fill: currentcolor;
-    vertical-align: middle;
 }
 
 .social-element-styled::after {
